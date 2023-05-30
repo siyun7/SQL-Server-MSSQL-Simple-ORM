@@ -8,9 +8,9 @@
         $configs['username'] = "SA";
         $configs['password'] = 'yourpassword';
 		
-		$service = new MssqlService($configs);
+	$service = new MssqlService($configs);
 		
-		$where = ['id' => ['>', 6]];
+	$where = ['id' => ['>', 6]];
         $updateWhere = ['id' => ['=', 6]];
         $attrs = ['quantity' => random_int(7777, 9999), 'name' => $this->generateRandomChineseString(5)];
         $service->from('Inventory')->update($updateWhere, $attrs);
